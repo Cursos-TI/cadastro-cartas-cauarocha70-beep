@@ -24,16 +24,14 @@ int main() {
     printf("=== Cadastro da Carta 1 ===\n");
 
     printf("Estado (A-H): ");
-    scanf(" %c", &estado1); // o espaco antes do %c ignora qualquer \n que tenha sobrado no buffer
-
+    scanf(" %c", &estado1); 
     printf("Codigo da Carta (ex: A01): ");
     scanf("%s", codigo1);
-    getchar(); // limpa o \n deixado pelo scanf("%s", ...) antes de usar fgets
+    getchar(); 
 
     printf("Nome da Cidade: ");
     fgets(cidade1, 50, stdin);
-    cidade1[strcspn(cidade1, "\n")] = 0; // remove o \n que o fgets guarda junto
-
+    cidade1[strcspn(cidade1, "\n")] = 0; 
     printf("Populacao: ");
     scanf("%d", &populacao1);
 
